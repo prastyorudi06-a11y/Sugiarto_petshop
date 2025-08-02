@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sugiarto Petshop Bojonegoro</title>
+  <meta name="description" content="Petshop terpercaya di Bojonegoro. Layanan grooming, makanan, aksesoris & kebutuhan hewan dengan gratis ongkir dan booking via WhatsApp.">
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="bg-red-600 py-6 text-center shadow-lg">
+    <h1 class="text-3xl md:text-4xl font-bold">🐾 Sugiarto Petshop 🐾 Bojonegoro</h1>
+    <div id="jam-digital" class="mt-2 text-xl font-mono">00:00:00</div>
+    <canvas id="jam-analog" width="120" height="120" class="mx-auto mt-4"></canvas>
+    <p class="mt-4 text-sm md:text-base px-4 leading-relaxed">
+      <p1>Kebutuhan Anabul habis? Mau pesan tanpa repot datang ke toko dan tetap hemat ongkir?
+      <br><strong class="text-white">Solusinya ada di sini — mudah, cepat, dan terpercaya!</strong>
+    </p>
+  </header>
+
+  <!-- Promo -->
+  <section class="bg-red-700 py-8 px-6 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">🎁 Gratis Ongkir</h2>
+    <p class="text-sm md:text-base">
+      🔹 Dalam kota min. order Rp50.000<br>
+      🔹 Balen, Sumberjo, Dander, Ngasem, Kalitidu, Soko: min. Rp100.000
+    </p>
+    <a href="#form" class="mt-4 inline-block bg-white text-red-700 font-bold px-6 py-2 rounded-full shadow hover:bg-gray-200 transition">
+      Booking Sekarang
+    </a>
+  </section>
+
+  <!-- Produk & Layanan -->
+  <main class="py-10 px-6 max-w-3xl mx-auto text-center">
+    <h3 class="text-xl md:text-2xl font-bold mb-4">🐶 Kebutuhan & Layanan Kami:</h3>
+    <ul class="text-left text-sm md:text-base leading-relaxed mb-6">
+      <li>✔️ Pakan kucing, anjing, hamster, kelinci</li>
+      <li>✔️ Aksesoris lucu & unik</li>
+      <li>✔️ Obat-obatan & vitamin</li>
+      <li>✔️ Kandang berbagai ukuran</li>
+      <li>✔️ Pasir kucing berbagai varian</li>
+    </ul>
+    <p class="mb-4">✂️ Kami juga melayani <strong>Grooming & Penitipan</strong></p>
+    <p class="mb-4">🕗 Jam Buka: <strong>08.00 – 20.00 WIB</strong> (setiap hari)</p>
+    <a href="https://wa.me/6285712401996?text=Halo%2C%20saya%20ingin%20menanyakan%20ketersediaan%20produk" target="_blank"
+       class="bg-green-500 hover:bg-green-400 text-white px-5 py-2 rounded-full font-semibold transition">
+      Tanya via WhatsApp
+    </a>
+  </main>
+
+  <!-- Form Booking Grooming -->
+  <section id="form" class="bg-gray-800 py-10 px-4 text-center">
+    <h3 class="text-xl font-semibold mb-6">📅 Booking Jadwal Grooming</h3>
+    <form class="max-w-md mx-auto space-y-4 bg-gray-700 p-6 rounded-lg shadow-lg">
+      <input type="text" id="nama" placeholder="Nama Anda" class="w-full px-4 py-2 rounded bg-gray-900 text-white" required />
+      <input type="text" id="hewan" placeholder="Jenis Hewan (Kucing/Anjing)" class="w-full px-4 py-2 rounded bg-gray-900 text-white" required />
+      <input type="date" id="tanggal" class="w-full px-4 py-2 rounded bg-gray-900 text-white" required />
+      <input type="time" id="jam" class="w-full px-4 py-2 rounded bg-gray-900 text-white" required />
+      <button type="submit" class="w-full bg-red-600 hover:bg-red-500 px-4 py-2 rounded text-white font-bold transition">
+        📲 Kirim Booking via WhatsApp
+      </button>
+    </form>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="bg-gray-900 py-6 px-4">
+    <h3 class="text-xl font-semibold text-center mb-4">📍 Lokasi Sugiarto Petshop</h3>
+    <div class="max-w-4xl mx-auto rounded overflow-hidden shadow-lg">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.008942740001!2d111.8977754749572!3d-7.573029692438961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77834b28a66c15%3A0xb25dc0f6ec66ad3!2sJl.%20Untung%20Suropati%20No.56A%2C%20Sumbang%2C%20Klangon%2C%20Kec.%20Bojonegoro%2C%20Kabupaten%20Bojonegoro%2C%20Jawa%20Timur%2062113!5e0!3m2!1sid!2sid!4v1721200000000"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-6 text-sm text-gray-400 border-t border-gray-700">
+    &copy; 2025 Sugiarto Petshop – Jl. Untung Suropati No.56A, Bojonegoro, Jawa Timur 62113
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Jam Digital
+    function updateJam() {
+      const jam = document.getElementById('jam-digital');
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      jam.textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(updateJam, 1000);
+    updateJam();
+
+    // WhatsApp Booking
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const hewan = document.getElementById("hewan").value;
+      const tanggal = document.getElementById("tanggal").value;
+      const jam = document.getElementById("jam").value;
+      const pesan = `Halo, saya ingin booking grooming:\n\nNama: ${nama}\nHewan: ${hewan}\nTanggal: ${tanggal}\nJam: ${jam}\n\nApakah slot tersedia?`;
+      window.open(`https://wa.me/6285712401996?text=${encodeURIComponent(pesan)}`, "_blank");
+    });
+
+    // Jam Analog
+    function drawClock() {
+      const canvas = document.getElementById("jam-analog");
+      const ctx = canvas.getContext("2d");
+      const radius = canvas.height / 2;
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transform
+      ctx.translate(radius, radius);
+      setInterval(() => {
+        ctx.clearRect(-radius, -radius, canvas.width, canvas.height);
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius);
+      }, 1000);
+    }
+
+    function drawFace(ctx, radius) {
+      ctx.beginPath();
+      ctx.arc(0, 0, radius * 0.95, 0, 2 * Math.PI);
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+      ctx.strokeStyle = "#ff0000";
+      ctx.lineWidth = radius * 0.05;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 0, radius * 0.05, 0, 2 * Math.PI);
+      ctx.fillStyle = "#333";
+      ctx.fill();
+    }
+
+    function drawNumbers(ctx, radius) {
+      ctx.font = radius * 0.15 + "px sans-serif";
+      ctx.textBaseline = "middle";
+      ctx.textAlign = "center";
+      for (let num = 1; num <= 12; num++) {
+        const ang = num * Math.PI / 6;
+        ctx.rotate(ang);
+        ctx.translate(0, -radius * 0.85);
+        ctx.rotate(-ang);
+        ctx.fillText(num.toString(), 0, 0);
+        ctx.rotate(ang);
+        ctx.translate(0, radius * 0.85);
+        ctx.rotate(-ang);
+      }
+    }
+
+    function drawTime(ctx, radius) {
+      const now = new Date();
+      let hour = now.getHours() % 12;
+      let minute = now.getMinutes();
+      let second = now.getSeconds();
+      hour = (hour * Math.PI / 6) + (minute * Math.PI / 360) + (second * Math.PI / 21600);
+      drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+      minute = (minute * Math.PI / 30) + (second * Math.PI / 1800);
+      drawHand(ctx, minute, radius * 0.75, radius * 0.07);
+      second = second * Math.PI / 30;
+      drawHand(ctx, second, radius * 0.85, radius * 0.02, "#ff0000");
+    }
+
+    function drawHand(ctx, pos, length, width, color = "#333") {
+      ctx.beginPath();
+      ctx.lineWidth = width;
+      ctx.lineCap = "round";
+      ctx.strokeStyle = color;
+      ctx.moveTo(0, 0);
+      ctx.rotate(pos);
+      ctx.lineTo(0, -length);
+      ctx.stroke();
+      ctx.rotate(-pos);
+    }
+
+    drawClock();
+  </script>
+</body>
+</html>
